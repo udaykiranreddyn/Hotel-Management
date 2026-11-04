@@ -157,7 +157,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onSuccess }) => {
               <h1 style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: '1.3rem', fontWeight: 700, color: '#0B1B3A', letterSpacing: '0.02em' }}>
                 Welcome Back
               </h1>
-              <p style={{ margin: '0.3rem 0 0', fontSize: '0.82rem', color: 'var(--text-muted)' }}>
+              <p style={{ margin: '0.3rem 0 0', fontSize: '0.82rem', color: '#374151' }}>
                 Sign in to access your dashboard
               </p>
             </div>
@@ -168,10 +168,10 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onSuccess }) => {
               <div style={{ marginBottom: '1.5rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.65rem' }}>
                   <KeyRound size={12} color="#D4A017" />
-                  <span style={{ fontSize: '0.73rem', fontWeight: 600, color: '#D4A017', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                  <span style={{ fontSize: '0.73rem', fontWeight: 600, color: '#92400e', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                     Quick Demo Access
                   </span>
-                  <span style={{ marginLeft: 'auto', fontSize: '0.68rem', color: 'var(--text-muted)' }}>pass: Password@123</span>
+                  <span style={{ marginLeft: 'auto', fontSize: '0.68rem', color: '#374151' }}>pass: Password@123</span>
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '0.5rem' }}>
                   {demoAccounts.map((acc) => (
@@ -205,7 +205,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onSuccess }) => {
               {/* Divider */}
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
                 <div style={{ flex: 1, height: '1px', background: '#E2E8F0' }} />
-                <span style={{ fontSize: '0.72rem', color: 'var(--text-subtle)', fontWeight: 500 }}>OR SIGN IN MANUALLY</span>
+                <span style={{ fontSize: '0.72rem', color: '#6B7280', fontWeight: 500 }}>OR SIGN IN MANUALLY</span>
                 <div style={{ flex: 1, height: '1px', background: '#E2E8F0' }} />
               </div>
 
@@ -224,9 +224,9 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onSuccess }) => {
               {/* Form */}
               <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '0.4rem' }}>Email Address</label>
+                  <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: '#111827', marginBottom: '0.4rem' }}>Email Address</label>
                   <div style={{ position: 'relative' }}>
-                    <Mail size={15} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-subtle)' }} />
+                    <Mail size={15} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#6B7280' }} />
                     <input
                       type="email" required
                       placeholder="your@email.com"
@@ -240,9 +240,9 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onSuccess }) => {
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '0.4rem' }}>Password</label>
+                  <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: '#111827', marginBottom: '0.4rem' }}>Password</label>
                   <div style={{ position: 'relative' }}>
-                    <Lock size={15} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-subtle)' }} />
+                    <Lock size={15} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#6B7280' }} />
                     <input
                       type={showPass ? 'text' : 'password'} required
                       placeholder="Enter your password"
@@ -253,7 +253,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onSuccess }) => {
                       onBlur={(e) => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'}
                     />
                     <button type="button" onClick={() => setShowPass(!showPass)}
-                      style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-subtle)', padding: 0 }}>
+                      style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: '#6B7280', padding: 0 }}>
                       {showPass ? <EyeOff size={15} /> : <Eye size={15} />}
                     </button>
                   </div>
@@ -284,7 +284,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onSuccess }) => {
               </form>
 
               {/* Footer */}
-              <p style={{ textAlign: 'center', marginTop: '1.5rem', fontSize: '0.83rem', color: 'var(--text-muted)', margin: '1.5rem 0 0' }}>
+              <p style={{ textAlign: 'center', marginTop: '1.5rem', fontSize: '0.83rem', color: '#374151', margin: '1.5rem 0 0' }}>
                 Don't have an account?{' '}
                 <Link to="/register" style={{ color: '#D4A017', textDecoration: 'none', fontWeight: 600 }}
                   onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}

@@ -150,7 +150,7 @@ export const RegisterPage: React.FC<RegisterPageProps> = ({ onSuccess }) => {
                   Create Your Account
                 </h1>
               </div>
-              <p style={{ margin: 0, fontSize: '0.82rem', color: 'var(--text-muted)' }}>
+              <p style={{ margin: 0, fontSize: '0.82rem', color: '#374151' }}>
                 Join AURA Hotels — choose your role to get started
               </p>
             </div>
@@ -173,7 +173,7 @@ export const RegisterPage: React.FC<RegisterPageProps> = ({ onSuccess }) => {
 
                 {/* Role Selection */}
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 600, color: '#111827', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     Account Role
                   </label>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '0.5rem' }}>
@@ -188,8 +188,8 @@ export const RegisterPage: React.FC<RegisterPageProps> = ({ onSuccess }) => {
                         }}
                       >
                         <span style={{ fontSize: '1.2rem' }}>{r.icon}</span>
-                        <span style={{ fontSize: '0.75rem', fontWeight: 700, color: role === r.value ? '#0B1B3A' : 'var(--text-muted)' }}>{r.label}</span>
-                        <span style={{ fontSize: '0.62rem', color: 'var(--text-muted)' }}>{r.desc}</span>
+                        <span style={{ fontSize: '0.75rem', fontWeight: 700, color: role === r.value ? '#0B1B3A' : '#374151' }}>{r.label}</span>
+                        <span style={{ fontSize: '0.62rem', color: '#6B7280' }}>{r.desc}</span>
                       </button>
                     ))}
                   </div>
@@ -197,9 +197,9 @@ export const RegisterPage: React.FC<RegisterPageProps> = ({ onSuccess }) => {
 
                 {/* Full Name */}
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '0.35rem' }}>Full Name</label>
+                  <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: '#111827', marginBottom: '0.35rem' }}>Full Name</label>
                   <div style={{ position: 'relative' }}>
-                    <User size={14} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-subtle)' }} />
+                    <User size={14} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#6B7280' }} />
                     <input type="text" required placeholder="Your full name"
                       value={fullName} onChange={(e) => setFullName(e.target.value)}
                       style={inputBase}
@@ -212,9 +212,9 @@ export const RegisterPage: React.FC<RegisterPageProps> = ({ onSuccess }) => {
                 {/* Email + Phone */}
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.65rem' }}>
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '0.35rem' }}>Email</label>
+                    <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: '#111827', marginBottom: '0.35rem' }}>Email</label>
                     <div style={{ position: 'relative' }}>
-                      <Mail size={13} style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-subtle)' }} />
+                      <Mail size={13} style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', color: '#6B7280' }} />
                       <input type="email" required placeholder="your@email.com"
                         value={email} onChange={(e) => setEmail(e.target.value)}
                         style={{ ...inputBase, paddingLeft: '2.1rem', fontSize: '0.82rem' }}
@@ -224,9 +224,9 @@ export const RegisterPage: React.FC<RegisterPageProps> = ({ onSuccess }) => {
                     </div>
                   </div>
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '0.35rem' }}>Phone</label>
+                    <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: '#111827', marginBottom: '0.35rem' }}>Phone</label>
                     <div style={{ position: 'relative' }}>
-                      <Phone size={13} style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-subtle)' }} />
+                      <Phone size={13} style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', color: '#6B7280' }} />
                       <input type="tel" placeholder="+91 98765 00000"
                         value={phone} onChange={(e) => setPhone(e.target.value)}
                         style={{ ...inputBase, paddingLeft: '2.1rem', fontSize: '0.82rem' }}
@@ -240,9 +240,9 @@ export const RegisterPage: React.FC<RegisterPageProps> = ({ onSuccess }) => {
                 {/* Password + Confirm */}
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.65rem' }}>
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '0.35rem' }}>Password</label>
+                    <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: '#111827', marginBottom: '0.35rem' }}>Password</label>
                     <div style={{ position: 'relative' }}>
-                      <Lock size={13} style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-subtle)' }} />
+                      <Lock size={13} style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', color: '#6B7280' }} />
                       <input type={showPass ? 'text' : 'password'} required placeholder="Min 6 chars"
                         value={password} onChange={(e) => setPassword(e.target.value)}
                         style={{ ...inputBase, paddingLeft: '2.1rem', paddingRight: '2.4rem', fontSize: '0.82rem' }}
@@ -250,15 +250,15 @@ export const RegisterPage: React.FC<RegisterPageProps> = ({ onSuccess }) => {
                         onBlur={(e) => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'}
                       />
                       <button type="button" onClick={() => setShowPass(!showPass)}
-                        style={{ position: 'absolute', right: '8px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-subtle)', padding: 0 }}>
+                        style={{ position: 'absolute', right: '8px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: '#6B7280', padding: 0 }}>
                         {showPass ? <EyeOff size={13} /> : <Eye size={13} />}
                       </button>
                     </div>
                   </div>
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '0.35rem' }}>Confirm</label>
+                    <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: '#111827', marginBottom: '0.35rem' }}>Confirm</label>
                     <div style={{ position: 'relative' }}>
-                      <Lock size={13} style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-subtle)' }} />
+                      <Lock size={13} style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', color: '#6B7280' }} />
                       <input type={showConfirm ? 'text' : 'password'} required placeholder="Repeat password"
                         value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}
                         style={{ ...inputBase, paddingLeft: '2.1rem', paddingRight: '2.4rem', fontSize: '0.82rem' }}
@@ -266,7 +266,7 @@ export const RegisterPage: React.FC<RegisterPageProps> = ({ onSuccess }) => {
                         onBlur={(e) => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'}
                       />
                       <button type="button" onClick={() => setShowConfirm(!showConfirm)}
-                        style={{ position: 'absolute', right: '8px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-subtle)', padding: 0 }}>
+                        style={{ position: 'absolute', right: '8px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: '#6B7280', padding: 0 }}>
                         {showConfirm ? <EyeOff size={13} /> : <Eye size={13} />}
                       </button>
                     </div>
@@ -275,8 +275,8 @@ export const RegisterPage: React.FC<RegisterPageProps> = ({ onSuccess }) => {
 
                 {/* Preferences */}
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '0.35rem' }}>
-                    Stay Preferences <span style={{ fontWeight: 400, opacity: 0.6 }}>(optional)</span>
+                  <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: '#111827', marginBottom: '0.35rem' }}>
+                    Stay Preferences <span style={{ fontWeight: 400, opacity: 0.6, color: '#6B7280' }}>(optional)</span>
                   </label>
                   <input type="text" placeholder="e.g. High floor, king bed, quiet room, extra pillows"
                     value={preferences} onChange={(e) => setPreferences(e.target.value)}
@@ -311,7 +311,7 @@ export const RegisterPage: React.FC<RegisterPageProps> = ({ onSuccess }) => {
                 </button>
               </form>
 
-              <p style={{ textAlign: 'center', marginTop: '1.5rem', fontSize: '0.83rem', color: 'var(--text-muted)' }}>
+              <p style={{ textAlign: 'center', marginTop: '1.5rem', fontSize: '0.83rem', color: '#374151' }}>
                 Already have an account?{' '}
                 <Link to="/login" style={{ color: '#D4A017', textDecoration: 'none', fontWeight: 600 }}
                   onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
