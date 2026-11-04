@@ -282,10 +282,10 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
           <div style={{
             display: 'flex',
             borderRadius: '10px',
-            background: 'rgba(255, 255, 255, 0.04)',
+            background: '#E0F2FE',
             padding: '3px',
             marginBottom: '1.25rem',
-            border: '1px solid rgba(255, 255, 255, 0.08)',
+            border: '1px solid #BAE6FD',
           }}>
             <button
               type="button"
@@ -295,8 +295,8 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
                 padding: '0.55rem',
                 borderRadius: '8px',
                 border: 'none',
-                background: activeTab === 'login' ? 'var(--gold-gradient)' : 'transparent',
-                color: activeTab === 'login' ? '#0b111e' : 'var(--text-muted)',
+                background: activeTab === 'login' ? '#F5C542' : 'transparent',
+                color: '#0F172A',
                 fontWeight: 600,
                 fontSize: '0.85rem',
                 cursor: 'pointer',
@@ -313,8 +313,8 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
                 padding: '0.55rem',
                 borderRadius: '8px',
                 border: 'none',
-                background: activeTab === 'register' ? 'var(--gold-gradient)' : 'transparent',
-                color: activeTab === 'register' ? '#0b111e' : 'var(--text-muted)',
+                background: activeTab === 'register' ? '#F5C542' : 'transparent',
+                color: '#0F172A',
                 fontWeight: 600,
                 fontSize: '0.85rem',
                 cursor: 'pointer',
@@ -368,7 +368,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
               
               {/* Quick Select Role Buttons for Login */}
               <div>
-                <label style={{ display: 'block', fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '0.35rem', fontWeight: 600 }}>
+                <label style={{ display: 'block', fontSize: '0.78rem', color: '#111827', marginBottom: '0.35rem', fontWeight: 600 }}>
                   Select Account Role
                 </label>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.45rem' }}>
@@ -387,9 +387,9 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
                       style={{
                         padding: '0.45rem 0.25rem',
                         borderRadius: '6px',
-                        border: loginEmail === r.email ? '1px solid var(--gold-primary)' : '1px solid rgba(255, 255, 255, 0.1)',
-                        background: loginEmail === r.email ? 'rgba(212, 175, 55, 0.18)' : 'rgba(255, 255, 255, 0.03)',
-                        color: loginEmail === r.email ? 'var(--gold-light)' : 'var(--text-muted)',
+                        border: loginEmail === r.email ? '1px solid #0284C7' : '1px solid #BAE6FD',
+                        background: loginEmail === r.email ? '#E0F2FE' : '#F8FAFC',
+                        color: '#111827',
                         fontWeight: 600,
                         fontSize: '0.78rem',
                         cursor: 'pointer',
@@ -408,11 +408,11 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '0.35rem' }}>
+                <label style={{ display: 'block', fontSize: '0.78rem', color: '#111827', marginBottom: '0.35rem' }}>
                   Email Address
                 </label>
                 <div style={{ position: 'relative' }}>
-                  <Mail size={16} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
+                  <Mail size={16} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#6B7280' }} />
                   <input
                     type="email"
                     required
@@ -422,10 +422,10 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
                     style={{
                       width: '100%',
                       padding: '0.65rem 0.75rem 0.65rem 2.4rem',
-                      background: 'rgba(255, 255, 255, 0.05)',
-                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      background: '#FFFFFF',
+                      border: '1px solid #BAE6FD',
                       borderRadius: '8px',
-                      color: '#ffffff',
+                      color: '#000000',
                       fontSize: '0.875rem',
                       outline: 'none',
                     }}
@@ -434,11 +434,11 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '0.35rem' }}>
+                <label style={{ display: 'block', fontSize: '0.78rem', color: '#111827', marginBottom: '0.35rem' }}>
                   Password
                 </label>
                 <div style={{ position: 'relative' }}>
-                  <Lock size={16} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
+                  <Lock size={16} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#6B7280' }} />
                   <input
                     type="password"
                     required
@@ -448,10 +448,10 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
                     style={{
                       width: '100%',
                       padding: '0.65rem 0.75rem 0.65rem 2.4rem',
-                      background: 'rgba(255, 255, 255, 0.05)',
-                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      background: '#FFFFFF',
+                      border: '1px solid #BAE6FD',
                       borderRadius: '8px',
-                      color: '#ffffff',
+                      color: '#000000',
                       fontSize: '0.875rem',
                       outline: 'none',
                     }}
@@ -481,7 +481,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
               
               {/* Role Selection for New Registration */}
               <div>
-                <label style={{ display: 'block', fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '0.35rem', fontWeight: 600 }}>
+                <label style={{ display: 'block', fontSize: '0.78rem', color: '#111827', marginBottom: '0.35rem', fontWeight: 600 }}>
                   Select Account Role
                 </label>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.45rem' }}>
@@ -497,9 +497,9 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
                       style={{
                         padding: '0.5rem',
                         borderRadius: '8px',
-                        border: regRole === item.role ? '1px solid var(--gold-primary)' : '1px solid rgba(255, 255, 255, 0.1)',
-                        background: regRole === item.role ? 'rgba(212, 175, 55, 0.18)' : 'rgba(255, 255, 255, 0.04)',
-                        color: regRole === item.role ? 'var(--gold-light)' : 'var(--text-muted)',
+                        border: regRole === item.role ? '1px solid #0284C7' : '1px solid #BAE6FD',
+                        background: regRole === item.role ? '#E0F2FE' : '#F8FAFC',
+                        color: '#111827',
                         fontWeight: 600,
                         fontSize: '0.8rem',
                         cursor: 'pointer',
@@ -517,11 +517,11 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '0.35rem' }}>
+                <label style={{ display: 'block', fontSize: '0.78rem', color: '#111827', marginBottom: '0.35rem' }}>
                   Full Name
                 </label>
                 <div style={{ position: 'relative' }}>
-                  <User size={16} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
+                  <User size={16} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#6B7280' }} />
                   <input
                     type="text"
                     required
@@ -531,10 +531,10 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
                     style={{
                       width: '100%',
                       padding: '0.65rem 0.75rem 0.65rem 2.4rem',
-                      background: 'rgba(255, 255, 255, 0.05)',
-                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      background: '#FFFFFF',
+                      border: '1px solid #BAE6FD',
                       borderRadius: '8px',
-                      color: '#ffffff',
+                      color: '#000000',
                       fontSize: '0.875rem',
                       outline: 'none',
                     }}
@@ -544,7 +544,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '0.35rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.78rem', color: '#111827', marginBottom: '0.35rem' }}>
                     Email Address
                   </label>
                   <input
@@ -556,17 +556,17 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
                     style={{
                       width: '100%',
                       padding: '0.65rem 0.75rem',
-                      background: 'rgba(255, 255, 255, 0.05)',
-                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      background: '#FFFFFF',
+                      border: '1px solid #BAE6FD',
                       borderRadius: '8px',
-                      color: '#ffffff',
+                      color: '#000000',
                       fontSize: '0.875rem',
                       outline: 'none',
                     }}
                   />
                 </div>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '0.35rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.78rem', color: '#111827', marginBottom: '0.35rem' }}>
                     Phone Number
                   </label>
                   <input
@@ -577,10 +577,10 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
                     style={{
                       width: '100%',
                       padding: '0.65rem 0.75rem',
-                      background: 'rgba(255, 255, 255, 0.05)',
-                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      background: '#FFFFFF',
+                      border: '1px solid #BAE6FD',
                       borderRadius: '8px',
-                      color: '#ffffff',
+                      color: '#000000',
                       fontSize: '0.875rem',
                       outline: 'none',
                     }}
@@ -590,7 +590,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '0.35rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.78rem', color: '#111827', marginBottom: '0.35rem' }}>
                     Password
                   </label>
                   <input
@@ -602,17 +602,17 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
                     style={{
                       width: '100%',
                       padding: '0.65rem 0.75rem',
-                      background: 'rgba(255, 255, 255, 0.05)',
-                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      background: '#FFFFFF',
+                      border: '1px solid #BAE6FD',
                       borderRadius: '8px',
-                      color: '#ffffff',
+                      color: '#000000',
                       fontSize: '0.875rem',
                       outline: 'none',
                     }}
                   />
                 </div>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '0.35rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.78rem', color: '#111827', marginBottom: '0.35rem' }}>
                     Confirm Password
                   </label>
                   <input
@@ -624,10 +624,10 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
                     style={{
                       width: '100%',
                       padding: '0.65rem 0.75rem',
-                      background: 'rgba(255, 255, 255, 0.05)',
-                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      background: '#FFFFFF',
+                      border: '1px solid #BAE6FD',
                       borderRadius: '8px',
-                      color: '#ffffff',
+                      color: '#000000',
                       fontSize: '0.875rem',
                       outline: 'none',
                     }}
@@ -636,7 +636,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '0.35rem' }}>
+                <label style={{ display: 'block', fontSize: '0.78rem', color: '#111827', marginBottom: '0.35rem' }}>
                   Room / Stay Preferences (Optional)
                 </label>
                 <input
@@ -647,10 +647,10 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
                   style={{
                     width: '100%',
                     padding: '0.65rem 0.75rem',
-                    background: 'rgba(255, 255, 255, 0.05)',
-                    border: '1px solid rgba(255, 255, 255, 0.12)',
+                    background: '#FFFFFF',
+                    border: '1px solid #BAE6FD',
                     borderRadius: '8px',
-                    color: '#ffffff',
+                    color: '#000000',
                     fontSize: '0.875rem',
                     outline: 'none',
                   }}
