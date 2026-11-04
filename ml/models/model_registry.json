@@ -1,0 +1,48 @@
+{
+  "project": "Smart Hotel Management System - AI Decision Support",
+  "models": {
+    "dynamic_pricing": {
+      "algorithm": "Ridge Regression",
+      "purpose": "Revenue optimization & demand-based dynamic room tariff suggestion",
+      "version": "1.0.0",
+      "status": "active"
+    },
+    "occupancy_forecasting": {
+      "algorithm": "Autoregressive Seasonal Trend Forecaster",
+      "purpose": "7-day future occupancy & booking velocity projection",
+      "version": "1.0.0",
+      "status": "active"
+    },
+    "cancellation_risk": {
+      "algorithm": "Logistic Regression Classifier",
+      "purpose": "Early warning detection for booking cancellation likelihood",
+      "version": "1.0.0",
+      "status": "active"
+    },
+    "smart_room_recommender": {
+      "algorithm": "Multi-Criteria Feature Cosine Scoring",
+      "purpose": "Personalized room match for budget, guest party, and amenities",
+      "version": "1.0.0",
+      "status": "active"
+    },
+    "sentiment_nlp": {
+      "algorithm": "TF-IDF + Multinomial Naive Bayes",
+      "purpose": "Guest review & complaint priority categorization",
+      "version": "1.0.0",
+      "status": "active"
+    },
+    "guest_ltv_vip": {
+      "algorithm": "Random Forest Regressor & Classifier Ensemble",
+      "purpose": "Predicts guest lifetime value, VIP tier, and personalized retention perks",
+      "version": "1.0.0",
+      "status": "active"
+    },
+    "housekeeping_turnaround": {
+      "algorithm": "ElasticNet Multi-Feature Regressor",
+      "purpose": "Optimizes room turnaround time, team allocation, and energy eco-mode",
+      "version": "1.0.0",
+      "status": "active"
+    }
+  },
+  "last_updated": "2026-10-06T11:34:45.731348"
+}
