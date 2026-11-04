@@ -58,9 +58,9 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onSuccess }) => {
   const inputBase: React.CSSProperties = {
     width: '100%', boxSizing: 'border-box',
     padding: '0.75rem 0.875rem 0.75rem 2.6rem',
-    background: '#F8FAFC',
+    background: '#FFFFFF',
     border: '1px solid #E2E8F0',
-    borderRadius: '10px', color: '#0B1B3A',
+    borderRadius: '10px', color: '#000000',
     fontSize: '0.9rem', outline: 'none',
     transition: 'border-color 0.2s',
     fontFamily: 'var(--font-sans)',
