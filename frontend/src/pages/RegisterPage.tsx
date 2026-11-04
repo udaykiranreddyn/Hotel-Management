@@ -51,6 +51,11 @@ export const RegisterPage: React.FC<RegisterPageProps> = ({ onSuccess }) => {
       let detail = err.response?.data?.detail;
       if (Array.isArray(detail)) detail = detail.map((d: any) => d.msg || JSON.stringify(d)).join(', ');
       else if (typeof detail === 'object' && detail) detail = JSON.stringify(detail);
+
+      if (err.response?.status === 404) {
+        detail = 'The backend API is not running. Start the FastAPI server on port 8000 and try again.';
+      }
+
       setErrorMsg(detail || err.message || 'Registration failed. Please check your details.');
     } finally {
       setIsLoading(false);
