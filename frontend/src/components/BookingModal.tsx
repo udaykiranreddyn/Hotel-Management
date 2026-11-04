@@ -16,6 +16,7 @@ import { PaymentService, loadRazorpayScript } from '../services/paymentService';
 import { PaymentReceiptModal } from './payment/PaymentReceiptModal';
 import type { PaymentReceipt } from '../services/paymentService';
 import type { BookingRecord } from '../context/BookingContext';
+import { saveBookingToFirestore } from '../firebase';
 
 interface BookingModalProps {
   onOpenAuth?: () => void;
@@ -243,6 +244,16 @@ export const BookingModal: React.FC<BookingModalProps> = ({}) => {
 
             const updated = [newBooking, ...userBookings];
             saveBookings(updated);
+            await saveBookingToFirestore({
+              booking_reference: String(newBooking.id),
+              guest_name: newBooking.guestName,
+              guest_email: newBooking.guestEmail,
+              room_id: newBooking.roomId,
+              check_in_date: newBooking.checkIn,
+              check_out_date: newBooking.checkOut,
+              total_amount: newBooking.totalAmount,
+              status: newBooking.status,
+            });
             setConfirmedBooking(newBooking);
             setLastPaymentId(verifyRes.payment_id);
             refreshRooms();
