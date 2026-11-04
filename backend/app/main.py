@@ -20,6 +20,18 @@ async def lifespan(app: FastAPI):
         run_migration()
     except Exception as e:
         print(f"[INIT] Safe migration check notice: {e}")
+    # Seed demo data on Vercel (ephemeral DB starts empty each cold start)
+    if os.environ.get("VERCEL"):
+        try:
+            from scripts.seed_hotel_data import seed_all
+            seed_all()
+        except Exception as e:
+            print(f"[INIT] Seed notice: {e}")
+        try:
+            from scripts.seed_demo_users import seed_demo_users
+            seed_demo_users()
+        except Exception as e:
+            print(f"[INIT] Demo users seed notice: {e}")
     db_check = check_db_connection()
     print(f"[INIT] Database status: {db_check['status']} (Latency: {db_check['latency_ms']}ms)")
     yield

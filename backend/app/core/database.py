@@ -10,8 +10,10 @@ db_url = settings.DATABASE_URL
 
 if db_url.startswith("sqlite"):
     connect_args = {"check_same_thread": False}
-    # Resolve relative sqlite paths reliably to <project_root>/data/hotel.db
-    if ":/" not in db_url[10:] and not db_url.startswith("sqlite:////"):
+    # On Vercel serverless, only /tmp is writable
+    if os.environ.get("VERCEL"):
+        db_url = "sqlite:////tmp/hotel.db"
+    elif ":/" not in db_url[10:] and not db_url.startswith("sqlite:////"):
         project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
         data_dir = os.path.join(project_root, "data")
         os.makedirs(data_dir, exist_ok=True)
